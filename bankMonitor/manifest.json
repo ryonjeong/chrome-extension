@@ -2,7 +2,11 @@
     "name": "bank monitoring extension",
     "version": "1.0",
     "description": "bank monitoring & notifier",
-    "permissions": ["pageCapture", "activeTab"],
+    "permissions": [
+        "pageCapture", 
+        "http://127.0.0.1/*",
+        "activeTab"
+    ],
     "background": {
         "scripts": ["background.js"],
         "persistent": false
