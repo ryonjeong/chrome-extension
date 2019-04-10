@@ -1,0 +1,22 @@
+{
+    "name": "bank monitoring extension",
+    "version": "1.0",
+    "description": "bank monitoring & notifier",
+    "permissions": ["pageCapture", "activeTab"],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "manifest_version": 2,
+    "browser_action": {
+        "default_title": "bank monitor extension",
+        "default_icon": "images/piggy-bank-off-16.png",
+        "default_popup": "popup.html"
+    },
+
+    "icons": {
+        "16": "images/piggy-bank16.png",
+        "128": "images/piggy-bank128.png"
+    }
+
+  }
