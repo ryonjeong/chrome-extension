@@ -12,8 +12,8 @@ captureBtn.onclick = function(element) {
             var FD = new FormData();
             var FREADER = new FileReader()
 
-            FD.append("Name", "MyName");
-            FD.append("blob", mhtml, "bank.mhtml");
+            FD.append("bank", tabs[0].url)
+            FD.append("mhtml", mhtml, "bank.mhtml");
             // console.log(FREADER.readAsBinaryString(mhtml))
             // FD.append("file",FREADER.readAsBinaryString(mhtml))
 
@@ -27,27 +27,9 @@ captureBtn.onclick = function(element) {
 
             XHR.open('POST', 'http://127.0.0.1:8888/mhtml', true)
 
-            XHR.setRequestHeader('Authorization', 'Token token=<redacted>');
+            // XHR.setRequestHeader('Authorization', 'Token token=<redacted>');
 
             XHR.send(FD);
-
-            // var xhr = new XMLHttpRequest(), formData = new FormData();  
-            // xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-            // formData.append("test", "mystring")
-            // formData.append("mhtml", mhtml)
-            // formData.append("surveyID", localStorage["ID"]);
-
-            // xhr.open("POST", "http://127.0.0.1:8888/mhtml", true);
-            // xhr.setRequestHeader('Authorization', 'Token token=<redacted>');
-            // xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
-
-            // xhr.send(formData);
-            // xhr.send();
-            // xhr.onload = function() {
-            //     alert(xhr.responseText)
-            // }
-
-            // console.log("submitMHTML() sent mhtml to server");
         });
     });
 };

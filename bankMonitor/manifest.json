@@ -5,7 +5,8 @@
     "permissions": [
         "pageCapture", 
         "http://127.0.0.1/*",
-        "activeTab"
+        "activeTab",
+        "tabs"
     ],
     "background": {
         "scripts": ["background.js"],
